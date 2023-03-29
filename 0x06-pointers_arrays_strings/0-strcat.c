@@ -7,20 +7,15 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int lengthD, lengthS;
+	int deslen = 0;
+	int srclen = 0;
+	int i;
 
-	lengthD = 0;
-	lengthS = 0;
-
-	while (*(dest + lengthD) != '\0')
-		lengthD++;
-
-	while (*(src + lengthS) != '\0' && lengthD < 97)
-	{
-		*(dest + lengthD) = *(src + lengthS);
-		lengthD++;
-		lengthS++;
-	}
-	*(dest + lengthD) = '\0';
-	return (dest);{
+	for (i = 0 ; dest[i] != '\0' ; i++)
+		deslen++;
+	for (i = 0 ; src[i] != '\0' ; i++)
+		srclen++;
+	for (i = 0 ; i <= srclen ; i++)
+		dest[deslen + i] = src[i];
+	return (dest);
 }
