@@ -1,39 +1,31 @@
 #include <stdio.h>
-#include "main.h"
 #include <stdlib.h>
 #include <ctype.h>
-
 /**
- * main - a function that adds positive numbers.
- * atoi - a function that converts a string to an integer
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - print the addition of two positive numbers.
+ * @argc: argument count or size of arguments.
+ * @argv: argument vector
  *
- * Return: 0 (Success), 1 (Error)
+ * Return: 1 for less of 2 arguments or nondigit numbers, 0 success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i, sum;
-	char *arg;
+	int sum, i, j;
 
-	if (argc == 1)
+	sum = 0;
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-	}
-	for (i = 0; i < argc ; i++)
-	{
-		arg = argv[i];
-		while (*arg != '\0')
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!isdigit(*arg))
+			if (!isdigit(argv[i][j]))
 			{
-			printf("Error\n");
-			return (1);
+				printf("Error\n");
+				return (1);
 			}
-		arg++;
 		}
-		sum = sum + atoi(argv[i]);
+		sum += atoi(argv[i]);
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
