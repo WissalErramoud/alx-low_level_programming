@@ -12,6 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
+	int num1, num2, result;
 	/*Check if two arguments were provided*/
 	if (argc != 3)
 	{
@@ -20,18 +21,11 @@ int main(int argc, char *argv[])
 	}
 
 	/*Get the two numbers from the command line arguments*/
-	int num1;
-
 	num1 = atoi(argv[1]);
-	int num2;
-
 	num2 = atoi(argv[2]);
 
 	/*Multiply the two numbers and print the result*/
-	int result;
-
 	result = num1 * num2;
-
 	printf("%d\n", result);
 	return (0);
 }
