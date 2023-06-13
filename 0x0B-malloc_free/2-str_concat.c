@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (j = 0; s2[j] != '\0'; i++, j++)
 	{
-		conct[i] = s2[j];
+		strdest[i] = s2[j];
 
 	}
 	strdest[i] = '\0';
