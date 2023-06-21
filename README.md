@@ -1,1 +1,1 @@
-This repository is a collection of projects and exercises focused on low-level programming using the C language.
+The project focuses on understanding and applying structures and typedefs in C programming.
