@@ -3,27 +3,31 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - Returns the sum of all its parameters.
- * @n: The number of parameters.
- * @...: Variable number of parameters.
+ * print_numbers - Prints numbers followed by a new line.
+ * @separator: The string to be printed between numbers.
+ * @n: The number of integers passed to the function.
+ * @...: Variable number of integers.
  *
- * Return: The sum of all parameters, or 0 if n is 0.
+ * Return: void
  */
-int sum_them_all(const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
-	int sum = 0;
 	unsigned int i;
-
-	if (n == 0)
-		return (0);
+	int num;
 
 	va_start(args, n);
 
 	for (i = 0; i < n; i++)
-		sum += va_arg(args, int);
+	{
+		num = va_arg(args, int);
+		printf("%d", num);
+
+		if (separator != NULL && i < n - 1)
+			printf("%s", separator);
+	}
 
 	va_end(args);
 
-	return (sum);
+	printf("\n");
 }
