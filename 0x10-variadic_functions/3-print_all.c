@@ -4,9 +4,8 @@
 
 /**
  * print_all - prints anything
- * @format: format string containing types of arguments
- * 				to print: c for char, i for int, f for float
- * 				and s for char pointer (string)
+ * @format: format string containing types of arguments to print:
+ * c for char, i for int, f for float and s for char pointer (string)
  *
  * Return: Nothing
  */
