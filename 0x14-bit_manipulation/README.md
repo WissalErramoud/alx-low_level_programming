@@ -1,0 +1,1 @@
+Project 0x14-bit_manipulation is a comprehensive library that offers a collection of efficient functions and tools for manipulating bits within a 14-bit data structure, designed to streamline bit-level operations and facilitate robust programming tasks.
